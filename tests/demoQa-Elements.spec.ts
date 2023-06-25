@@ -9,7 +9,7 @@ test.beforeEach(async ({ page }) => {
   //expect(page).toHaveTitle("Elements");
 });
 
-test("Navigate to Elements", async ({ page }) => {
+test("Navigate to Elements page", async ({ page }) => {
   await page.getByText("Text Box").click();
   expect(page.locator(".main-header")).toHaveText("Text Box");
   await page.getByPlaceholder("Full Name").fill("Fname Lname");
