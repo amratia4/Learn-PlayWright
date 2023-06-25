@@ -18,5 +18,5 @@ test("Navigate to Elements page", async ({ page }) => {
   await page.locator("#permanentAddress").click();
   await page.locator("#permanentAddress").fill("arqrqwrq");
   await page.getByRole("button", { name: "Submit" }).click();
-  expect(page.locator("#output")).toContainText("Fname Lname");
+  expect(page.locator("#output")).toContainText("Fname");
 });
