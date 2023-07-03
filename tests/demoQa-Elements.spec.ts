@@ -9,7 +9,7 @@ test.beforeEach(async ({ page }) => {
   //expect(page).toHaveTitle("Elements");
 });
 
-test("Navigate to Elements page", async ({ page }) => {
+test("Navigate to Text Box page", async ({ page }) => {
   await page.getByText("Text Box").click();
   expect(page.locator(".main-header")).toHaveText("Text Box");
   await page.getByPlaceholder("Full Name").fill("Fname Lname");
@@ -20,3 +20,24 @@ test("Navigate to Elements page", async ({ page }) => {
   await page.getByRole("button", { name: "Submit" }).click();
   //expect(page.locator("#output")).toContainText("Fname");
 });
+
+test('Navigate to Radio Button',async ({page}) => {
+  await page.getByText('Radio Button').click()
+  expect(page.locator('.main-header')).toHaveText('Radio Button')
+  await page.getByText('Yes').click();
+  expect(page.locator('.text-success')).toContainText('Yes')
+  await page.getByText('Impressive').click();
+  expect(page.locator('.text-success')).toContainText('Impresssive')
+  
+  
+  
+})
+
+test ('Navigate to Web Tabels',async ({page}) => {
+  await page.getByText('Web Tables').click()
+  expect(page.locator('.main-header')).toHaveText('Web Tables')
+
+
+  
+})
+
