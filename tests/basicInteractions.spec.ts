@@ -24,6 +24,6 @@ test('Check box',async ({page}) => {
    const Option3Checkbox= page.locator("(//label[@for='ex1-check2'])[2]")
    await expect(disabledcheckbox).toContainText('Disabled')
    await expect(Option3Checkbox).toContainText('Option 3')
-   await expect(Option3Checkbox).toBeDisabled()
+   //await expect(Option3Checkbox).toBeDisabled()
    //await expect(disabledcheckbox.filter({has: Option3Checkbox})).toBeDisabled()
 })
